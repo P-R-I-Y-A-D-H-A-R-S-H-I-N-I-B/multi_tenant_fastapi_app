@@ -61,7 +61,7 @@ def create_tenant_schema_tables(schema_name: str):
         conn.execute(text(f"CREATE SCHEMA IF NOT EXISTS {schema_name}"))
         conn.commit()
 
-    print(f"Schema '{schema_name}' created successfully")
+    print(f"Schema '{schema_name}' created successfully!")
     # Create tables in the tenant schema
     with engine.connect() as conn:
         # Set search path to the tenant schema
